@@ -2,15 +2,15 @@
 
   
 
-> This is **Day 1 of a 4-night project**. Each night you grow the *same* file. Save it as `Quadratics Studio` in your Doenet activities — you will reopen it tomorrow.
+> This is **Day 1 of a 4-night project**. Each night you grow the *same* file. Save it as `Quadratics Studio.doenet` in your Doenet activities — you will reopen it tomorrow.
 
   
 
-**Goal:** Create a clean, well-structured Doenet document with one auto-graded factoring question and a 6-problem factoring pretzel.
+**Goal:** Stand up a clean, well-structured Doenet document with one auto-graded factoring question and a 6-problem factoring pretzel.
 
   
 
-**New components this session:** `<section>`, `<title>`, `boxed`, `<aside>`, `autonumber`, `<p>`, `<em>`, `<alert>`, `<c>`, `<m>`, comments (`Cmd+/`), `<answer>`, `<award>`, `<mathInput>`, `credit`, `matchExactPositions`, `caseInsensitiveMatch`, the pretzel template, `columns`, `isDistractor`.
+**New components this session:** `<section>`, `<title>`, `boxed`, `<aside>`, `includeAutoNumber`, `<p>`, `<em>`, `<alert>`, `<c>`, `<m>`, comments (`Cmd+/`), `<answer>`, `<award>`, `<mathInput>`, `credit`, `matchByExactPositions`, `caseInsensitiveMatch`, the pretzel template, `maxNumColumns`, `isDistractor`.
 
   
 
@@ -32,7 +32,7 @@
 
 - Put the *student instructions* ("Factor each quadratic; enter your answer as a product of two binomials") inside an `<aside>` so they collapse.
 
-- Add a comment header at the top (course / chapter / your name) using `Cmd+/`.
+- Add a comment header at the top (course / chapter / your name) using `Cmd+/`, mirroring the style in [Factoring Crossword (a=1).doenet](../../Polynomial%20Functions/Factoring%20Crossword%20(a=1).doenet).
 
   
 
@@ -40,9 +40,11 @@
 
 - Question: *Factor* `<m>x^2 + 5x + 6</m>`.
 
-- Use the `answer-labeled` snippet (type `answer` in the editor and pick the snippet — it inserts a pre-structured template with a `<label>` included).
+- Use the `answer` snippet (type `answer` in the editor and pick the snippet — it inserts a pre-structured template with a `<label>` included).
 
 - Give a full-credit `<award>` for `(x+2)(x+3)` and a **partial-credit** `<award credit="0.5">` for a near-miss you choose (e.g. correct binomials, wrong signs).
+
+- Order already doesn't matter for a product, so `(x+3)(x+2)` is accepted by default. If you ever need to *enforce* position, that attribute is `matchByExactPositions`; `caseInsensitiveMatch` is available for text answers.
 
 - If the mathInput shows a red accessibility flag, give it a `<label>` for now. *(We make everything accessible on Day 4 — just clear this one flag today.)*
 
@@ -52,7 +54,7 @@
 
 - Load the pretzel template from the code snippet (the 10-problem template shown in Session 1).
 
-- **Delete problems down to 6.** Set `columns="3"`.
+- **Delete problems down to 6.** Set `maxNumColumns="3"`.
 
 - Fill each problem with a trinomial to factor and its answer. Keep numbers small and factorable (e.g. roots in 1–6).
 
